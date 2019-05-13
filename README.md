@@ -7,25 +7,34 @@
 ```rb
 
 students = [
-  {
-      first_name: 'Ahmed',
-      last_name: 'Althagafi'
-  },
-  {
-      first_name: 'Norah',
-      last_name: 'Alshehri',
-  },
-  {
-      first_name: 'Haneen',
-      last_name: 'Alghamdi',
-  }
-]
+{first_name: 'Taha',
+last_name: 'Sindi'}
+,
+{first_name: 'Norah',
+last_name: 'Alshehri',}
+,
+{first_name: 'Haneen',
+last_name: 'Alghamdi',}]
 
-upper_case_full_names = []
+full_names_list = []
+
+students.each do |names|
+    
+full_name = ""; space = " ";
+
+names.each do |k,v|
+
+full_name = full_name + v.upcase + space
+
+end
+
+full_names_list.push(full_name)
+
+end
+
+puts full_names_list
 
 ```
-
-### Answer
 
 ```rb
 
@@ -38,43 +47,32 @@ upper_case_full_names = []
 ```rb
 
 users = [
-  {
-      name: 'Salman',
-      orders: [
-          {
-              description: 'a bike'
-          }
-      ]
-  },
-  {
-      name: 'Saeed',
-      orders: [
-          {
-              description: 'bees'
-          },
-          {
-              description: 'fishing rod'
-          }
-      ]
-  },
-  {
-      name: 'Danyah',
-      orders: [
-          {
-              description: 'a MacBook'
-          },
-          {
-              description: 'The West Wing DVDs'
-          },
-          {
-              description: 'headphones'
-          },
-          {
-              description: 'a kitten'
-          }
-      ]
-  }
-]
+
+{name: 'Salman',
+
+orders: [
+    
+{description: 'a bike'}]},
+
+{name: 'Saeed',
+
+orders: [
+
+{description: 'bees'},
+
+{description: 'fishing rod'}]},
+
+{name: 'Danyah',
+
+orders: [
+
+{description: 'a MacBook'},
+
+{description: 'The West Wing DVDs'},
+
+{description: 'headphones'},
+
+{description: 'a kitten'}]}]
 
 first_order_for_each_user = []
 
@@ -85,66 +83,51 @@ first_order_for_each_user = []
 ```rb
 
 [ {description: "a bike"}, {description: "bees"}, {description: "a MacBook"} ]
+
 ```
 
 ## 3. Find the average amount spent on coffee, per transaction, for each person
 
 ```rb
 
-people = [
-  {
-      name: 'Jawaher',
-      transactions: [
-          {
-              type: 'COFFEE',
-              amount: 7.43
-          },
-          {
-              type: 'TACOS',
-              amount: 14.65
-          },
-          {
-              type: 'COFFEE',
-              amount: 4.43
-          }
-      ]
-  },
-  {
-      name: 'Nader',
-      transactions: [
-          {
-              type: 'BIKES',
-              amount: 800.00
-          },
-          {
-              type: 'TACOS',
-              amount: 14.65
-          },
-          {
-              type: 'COFFEE',
-              amount: 4.43
-          }
-      ]
-  },
-  {
-      name: 'Samah',
-      transactions: [
-          {
-              type: 'COFFEE',
-              amount: 7.43
-          },
-          {
-              type: 'COFFEE',
-              amount: 100.00
-          },
-          {
-              type: 'COFFEE',
-              amount: 4.43
-          }
-      ]
-  }
-]
+people = [{
+name: 'Jawaher',
 
+transactions: [{
+
+type: 'COFFEE',
+amount: 7.43},
+          
+{type: 'TACOS',
+amount: 14.65},
+
+{type: 'COFFEE',
+amount: 4.43}]},
+
+{name: 'Nader',
+
+transactions: [
+{type: 'BIKES',
+amount: 800.00},
+          
+{type: 'TACOS', 
+amount: 14.65},
+          
+{type: 'COFFEE',
+amount: 4.43}]},
+
+{name: 'Samah',
+
+transactions: [
+
+{type: 'COFFEE',
+amount: 7.43},
+
+{type: 'COFFEE',
+amount: 100.00},
+
+{type: 'COFFEE',
+amount: 4.43}]}]
 
 coffee_average_per_person = []
 
@@ -153,12 +136,11 @@ coffee_average_per_person = []
 ### Answer
 
 ```rb
+[{name: "Jawaher", :coffee_average=>5.93}, 
 
-[ 
-  {name: "Jawaher", :coffee_average=>5.93}, 
-  {name: "Nader", :coffee_average=>4.43}, 
-  {name: "Samah", :coffee_average=>37.28666666666667} 
-]
+{name: "Nader", :coffee_average=>4.43}, 
+
+{name: "Samah", :coffee_average=>37.28666666666667} ]
 
 ```
 
@@ -167,46 +149,39 @@ coffee_average_per_person = []
 ```rb
 
 stores = [
-  {
-      store_name: 'Jarir',
-      products: [
-          {
-              description: 'Titanium',
-              price: 9384.33
-          },
-          {
-              description: 'Gold',
-              price: 345.54
-          }
-      ]
-  },
-  {
-      store_name: 'Danub',
-      products: [
-          {
-              description: 'Silver',
-              price: 654.44
-          },
-          {
-              description: 'Ruby',
-              price: 323.43
-          }
-      ]
-  },
-  {
-      store_name: 'Souq',
-      products: [
-          {
-              description: 'Opal',
-              price: 345.43
-          },
-          {
-              description: 'Sapphire',
-              price: 899.33
-          }
-      ]
-  }
-]
+    
+{store_name: 'Jarir',
+
+products: [
+
+{description: 'Titanium',
+
+price: 9384.33},
+
+{description: 'Gold',
+
+price: 345.54}]},
+
+{store_name: 'Danub',
+
+products: [{
+
+description: 'Silver',
+
+price: 654.44},
+
+{description: 'Ruby',
+price: 323.43}]},
+
+{store_name: 'Souq',
+
+products: [
+
+{description: 'Opal',
+price: 345.43},
+
+{description: 'Sapphire',
+price: 899.33}]}]
 
 most_expensive_products_by_store = []
 
@@ -216,11 +191,12 @@ most_expensive_products_by_store = []
 
 ```rb
 
-[ 
-  {store_name: "Jarir", most_expensive_product: { description: "Titanium", price: 9384.33}},
-  {store_name: "Danub", most_expensive_product: { description: "Silver", price: 654.44}},
-  {store_name: "Souq", most_expensive_product: { description: "Sapphire", price: 899.33}}
-]
+[{store_name: "Jarir", most_expensive_product: { description: "Titanium", price: 9384.33}},
+
+{store_name: "Danub", most_expensive_product: { description: "Silver", price: 654.44}},
+
+{store_name: "Souq", most_expensive_product: { description: "Sapphire", price: 899.33}}]
+
 ```
 
 # Bonus
