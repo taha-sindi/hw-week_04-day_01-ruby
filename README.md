@@ -35,13 +35,7 @@ end
 puts full_names_list
 
 ```
-
-```rb
-
-[ 'AHMED ALTHAGAFI', 'NORAH ALSHEHRI', 'HANEEN ALGHAMDI' ]
-
-```
-
+``
 ## 2. Find the first order for each user
 
 ```rb
@@ -76,13 +70,17 @@ orders: [
 
 first_order_for_each_user = []
 
-```
+users.each do |list|
 
-### Answer
+list.each do |k,v|
 
-```rb
+if k.to_s == 'orders' 
 
-[ {description: "a bike"}, {description: "bees"}, {description: "a MacBook"} ]
+puts v[0]
+    
+end
+end
+end
 
 ```
 
@@ -198,23 +196,4 @@ most_expensive_products_by_store = []
 {store_name: "Souq", most_expensive_product: { description: "Sapphire", price: 899.33}}]
 
 ```
-
-# Bonus
-
-Write an infinite loop that will make you add all the your friends in the students list and after each add will ask if you want to quit the loop (yes/no) if the user choose no print all the students array
-
-### Answer
-
-```
-
->add a student
-Sumayah Bahkeem
->Do you want to continue ? (y/n)
-y
->add a student
-Huda Binzaqr
->Do you want to continue ? (y/n)
-y
->add a student
-
-```
+``
